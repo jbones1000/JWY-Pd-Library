@@ -1,4 +1,4 @@
-#N canvas 613 349 450 300 10;
+#N canvas 616 340 450 300 10;
 #X obj 98 63 inlet BPM;
 #X obj 98 100 expr 60000/$f1;
 #X obj 98 121 / 360;
@@ -9,11 +9,8 @@
 #X obj 120 186 + 1;
 #X obj 71 223 % 360;
 #X text 178 13 master ticks 0-359;
-#X obj 71 274 s metro360-ticks;
 #X obj 71 244 i;
-#X floatatom 221 77 5 0 0 0 - - -;
-#X obj 35 98 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
-;
+#X obj 71 274 outlet;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 1;
@@ -23,7 +20,5 @@
 #X connect 6 0 8 0;
 #X connect 6 1 7 0;
 #X connect 7 0 5 1;
-#X connect 8 0 11 0;
-#X connect 11 0 10 0;
-#X connect 12 0 1 0;
-#X connect 13 0 3 0;
+#X connect 8 0 10 0;
+#X connect 10 0 11 0;
