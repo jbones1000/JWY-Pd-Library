@@ -1,68 +1,81 @@
-#N canvas 225 128 1033 560 10;
-#N canvas 1287 119 450 300 toggles 0;
-#X obj 5 5 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1;
-#X obj 5 20 send snd-5;
-#X obj 5 -5 receive rcv-5;
-#X obj 25 5 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
-;
-#X obj 25 20 send snd-25;
-#X obj 25 -5 receive rcv-25;
-#X obj 45 5 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
-;
-#X obj 45 20 send snd-45;
-#X obj 45 -5 receive rcv-45;
-#X obj 65 5 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
-;
-#X obj 65 20 send snd-65;
-#X obj 65 -5 receive rcv-65;
-#X obj 85 5 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
-;
-#X obj 85 20 send snd-85;
-#X obj 85 -5 receive rcv-85;
-#X obj 105 5 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
-;
-#X obj 105 20 send snd-105;
-#X obj 105 -5 receive rcv-105;
-#X obj 125 5 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
-;
-#X obj 125 20 send snd-125;
-#X obj 125 -5 receive rcv-125;
-#X obj 145 5 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
-;
-#X obj 145 20 send snd-145;
-#X obj 145 -5 receive rcv-145;
-#X obj 165 5 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
-;
-#X obj 165 20 send snd-165;
-#X obj 165 -5 receive rcv-165;
-#X obj 185 5 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
-;
-#X obj 185 20 send snd-185;
-#X obj 185 -5 receive rcv-185;
-#X obj 205 5 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
-;
-#X obj 205 20 send snd-205;
-#X obj 205 -5 receive rcv-205;
-#X obj 225 5 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
-;
-#X obj 225 20 send snd-225;
-#X obj 225 -5 receive rcv-225;
-#X obj 245 5 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
-;
-#X obj 245 20 send snd-245;
-#X obj 245 -5 receive rcv-245;
-#X obj 265 5 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
-;
-#X obj 265 20 send snd-265;
-#X obj 265 -5 receive rcv-265;
-#X obj 285 5 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
-;
-#X obj 285 20 send snd-285;
-#X obj 285 -5 receive rcv-285;
-#X obj 305 5 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
-;
-#X obj 305 20 send snd-305;
-#X obj 305 -5 receive rcv-305;
+#N canvas 230 113 1033 560 10;
+#X msg 474 153 \; pd-toggles clear;
+#X obj 274 152 until;
+#X msg 428 163 0;
+#X obj 274 174 f;
+#X obj 311 176 + 1;
+#X msg 279 92 4;
+#X obj 274 127 t a b b, f 29;
+#X msg 324 93 8;
+#X msg 297 67 16;
+#X obj 139 46 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 151 66 / 127;
+#X obj 151 110 i;
+#X obj 151 132 + 1;
+#X obj 151 88 * 15;
+#X obj 726 211 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 767 292 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 765 331 s poops5;
+#X obj 772 359 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 284 434 r pd-toggles;
+#X msg 808 364 size \$1;
+#X floatatom 845 324 5 0 0 0 - - -, f 5;
+#X obj 770 398 s rcv-65;
+#X msg 603 470 \; pd-toggles obj \$1 5 tgl 15 0 snd rcv \;;
+#X msg 400 404 \; pd-toggles connect 3 4 6 1 \;;
+#X msg 807 428 \; pd-toggles connect 3 0 4 0 \;;
+#X msg 350 511 \; pd-toggles connect 2 0 0 0 \;;
+#X obj 321 241 * 3;
+#X obj 393 223 * 3;
+#X obj 393 245 + 1;
+#X obj 422 224 * 3;
+#X obj 422 246 + 2;
+#X obj 274 202 t a a a a a, f 30;
+#X obj 272 281 pack 0 0 0 0 0, f 31;
+#X obj 483 239 + 1;
+#X obj 725 250 s rcv-1;
+#X obj 821 203 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 820 242 s rcv-8;
+#X obj 913 213 r snd-8;
+#X obj 917 247 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 272 231 * 19;
+#X msg 272 304 \; pd-toggles obj \$1 5 tgl \; pd-toggles obj \$1 20
+send snd-\$5 \; pd-toggles obj \$1 -5 receive rcv-\$5 \; pd-toggles
+connect \$2 0 \$3 0 \; pd-toggles connect \$4 0 \$2 0 \;;
+#X obj 272 254 + 4;
+#X obj 4 -7 cnv 15 316 60 empty empty empty 20 12 0 14 -128992 -66577
+0;
+#N canvas 1298 86 450 300 toggles 0;
+#X obj 4 5 tgl 15 0 empty empty empty 17 7 0 10 -262144 -66577 -66577
+1 1;
+#X obj 4 20 send snd-1;
+#X obj 4 -5 receive rcv-1;
+#X obj 23 5 tgl 15 0 empty empty empty 17 7 0 10 -262144 -66577 -66577
+1 1;
+#X obj 23 20 send snd-2;
+#X obj 23 -5 receive rcv-2;
+#X obj 42 5 tgl 15 0 empty empty empty 17 7 0 10 -262144 -66577 -66577
+1 1;
+#X obj 42 20 send snd-3;
+#X obj 42 -5 receive rcv-3;
+#X obj 61 5 tgl 15 0 empty empty empty 17 7 0 10 -262144 -66577 -66577
+1 1;
+#X obj 61 20 send snd-4;
+#X obj 61 -5 receive rcv-4;
+#X obj 80 5 tgl 15 0 empty empty empty 17 7 0 10 -262144 -66577 -66577
+1 1;
+#X obj 80 20 send snd-5;
+#X obj 80 -5 receive rcv-5;
+#X obj 99 5 tgl 15 0 empty empty empty 17 7 0 10 -228286 -66577 -66577
+1 1;
+#X obj 99 20 send snd-6;
+#X obj 99 -5 receive rcv-6;
 #X connect 0 0 1 0;
 #X connect 2 0 0 0;
 #X connect 3 0 4 0;
@@ -75,101 +88,87 @@
 #X connect 14 0 12 0;
 #X connect 15 0 16 0;
 #X connect 17 0 15 0;
-#X connect 18 0 19 0;
-#X connect 20 0 18 0;
-#X connect 21 0 22 0;
-#X connect 23 0 21 0;
-#X connect 24 0 25 0;
-#X connect 26 0 24 0;
+#X coords 0 -1 1 1 308 25 2 0 0;
+#X restore 10 10 pd toggles;
+#X obj 558 25 inlet;
+#X obj 714 95 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X msg 12 151 \; rcv-\$1;
+#X obj 41 385 list append;
+#X obj 41 407 list trim;
+#X obj 75 209 t a a b;
+#X obj 25 282 t a b;
+#X obj 95 298 t a b;
+#X obj 121 254 f 0;
+#X floatatom 91 184 5 0 0 0 - - -, f 5;
+#X msg 41 435 \; rcv-\$1 color \$2 \$3 \$4;
+#X obj 156 396 print lol;
+#X msg 190 333 0 2 2;
+#X obj 165 203 metro 1000;
+#X obj 177 172 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 163 227 f;
+#X obj 200 229 + 1;
+#X obj 163 249 % 6;
+#X obj 163 271 + 1;
+#X msg 60 331 -1.45966e+07 2 2;
+#X connect 1 0 3 0;
+#X connect 2 0 3 1;
+#X connect 3 0 4 0;
+#X connect 3 0 31 0;
+#X connect 4 0 3 1;
+#X connect 5 0 6 0;
+#X connect 6 0 1 0;
+#X connect 6 1 2 0;
+#X connect 6 2 0 0;
+#X connect 7 0 6 0;
+#X connect 8 0 6 0;
+#X connect 9 0 10 0;
+#X connect 10 0 13 0;
+#X connect 11 0 12 0;
+#X connect 12 0 6 0;
+#X connect 13 0 11 0;
+#X connect 14 0 34 0;
+#X connect 15 0 16 0;
+#X connect 17 0 21 0;
+#X connect 19 0 21 0;
+#X connect 20 0 19 0;
+#X connect 26 0 32 1;
 #X connect 27 0 28 0;
-#X connect 29 0 27 0;
-#X connect 30 0 31 0;
-#X connect 32 0 30 0;
-#X connect 33 0 34 0;
-#X connect 35 0 33 0;
-#X connect 36 0 37 0;
-#X connect 38 0 36 0;
-#X connect 39 0 40 0;
-#X connect 41 0 39 0;
-#X connect 42 0 43 0;
-#X connect 44 0 42 0;
-#X connect 45 0 46 0;
-#X connect 47 0 45 0;
-#X coords 0 -1 1 1 325 25 2 0 0;
-#X restore 562 109 pd toggles;
-#X msg 503 155 \; pd-toggles clear;
-#X obj 274 152 until;
-#X msg 428 163 0;
-#X obj 274 174 f;
-#X obj 311 176 + 1;
-#X msg 308 92 4;
-#X obj 267 232 * 20;
-#X obj 271 254 + 5;
-#X obj 303 127 t a b b, f 29;
-#X msg 353 93 8;
-#X msg 326 67 16;
-#X obj 139 46 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 9900 1;
-#X obj 151 66 / 127;
-#X obj 151 110 i;
-#X obj 151 132 + 1;
-#X obj 151 88 * 15;
-#X obj 726 211 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 767 292 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 765 331 s poops5;
-#X obj 772 359 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 133 403 r pd-toggles;
-#X msg 808 364 size \$1;
-#X floatatom 845 324 5 0 0 0 - - -, f 5;
-#X obj 770 398 s rcv-65;
-#X msg 603 470 \; pd-toggles obj \$1 5 tgl 15 0 snd rcv \;;
-#X msg 400 404 \; pd-toggles connect 3 4 6 1 \;;
-#X msg 807 428 \; pd-toggles connect 3 0 4 0 \;;
-#X msg 350 511 \; pd-toggles connect 2 0 0 0 \;;
-#X obj 266 281 pack 0 0 0 0, f 24;
-#X obj 316 242 * 3;
-#X obj 387 223 * 3;
-#X obj 387 245 + 1;
-#X obj 416 224 * 3;
-#X obj 416 246 + 2;
-#X obj 268 202 t a a a a, f 23;
-#X obj 724 250 s rcv-305;
-#X msg 288 314 \; pd-toggles obj \$1 5 tgl \; pd-toggles obj \$1 20
-send snd-\$1 \; pd-toggles obj \$1 -5 receive rcv-\$1 \; pd-toggles
-connect \$2 0 \$3 0 \; pd-toggles connect \$4 0 \$2 0 \;;
-#X connect 2 0 4 0;
-#X connect 3 0 4 1;
-#X connect 4 0 5 0;
-#X connect 4 0 35 0;
-#X connect 5 0 4 1;
-#X connect 6 0 9 0;
-#X connect 7 0 8 0;
-#X connect 8 0 29 0;
-#X connect 9 0 2 0;
-#X connect 9 1 3 0;
-#X connect 9 2 1 0;
-#X connect 10 0 9 0;
-#X connect 11 0 9 0;
-#X connect 12 0 13 0;
-#X connect 13 0 16 0;
-#X connect 14 0 15 0;
-#X connect 15 0 9 0;
-#X connect 16 0 14 0;
-#X connect 17 0 36 0;
-#X connect 18 0 19 0;
-#X connect 20 0 24 0;
-#X connect 22 0 24 0;
-#X connect 23 0 22 0;
-#X connect 29 0 37 0;
-#X connect 30 0 29 1;
-#X connect 31 0 32 0;
-#X connect 32 0 29 2;
-#X connect 33 0 34 0;
-#X connect 34 0 29 3;
-#X connect 35 0 7 0;
-#X connect 35 1 30 0;
-#X connect 35 2 31 0;
-#X connect 35 3 33 0;
+#X connect 28 0 32 2;
+#X connect 29 0 30 0;
+#X connect 30 0 32 3;
+#X connect 31 0 39 0;
+#X connect 31 1 26 0;
+#X connect 31 2 27 0;
+#X connect 31 3 29 0;
+#X connect 31 4 33 0;
+#X connect 32 0 40 0;
+#X connect 33 0 32 4;
+#X connect 35 0 36 0;
+#X connect 37 0 38 0;
+#X connect 39 0 41 0;
+#X connect 41 0 32 0;
+#X connect 44 0 6 0;
+#X connect 47 0 48 0;
+#X connect 48 0 54 0;
+#X connect 48 0 55 0;
+#X connect 49 0 50 0;
+#X connect 49 1 52 1;
+#X connect 49 2 52 0;
+#X connect 50 0 47 0;
+#X connect 50 1 63 0;
+#X connect 51 0 47 0;
+#X connect 51 1 56 0;
+#X connect 52 0 51 0;
+#X connect 53 0 49 0;
+#X connect 56 0 47 1;
+#X connect 57 0 59 0;
+#X connect 58 0 57 0;
+#X connect 59 0 60 0;
+#X connect 59 0 61 0;
+#X connect 60 0 59 1;
+#X connect 61 0 62 0;
+#X connect 62 0 53 0;
+#X connect 63 0 47 1;
+#X coords 0 -1 1 1 308 25 2 10 10;
