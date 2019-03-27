@@ -1,2 +1,9 @@
 #N canvas 303 237 450 300 10;
-#X obj 78 26 inlet;
+#X obj 186 34 inlet;
+#N canvas 0 23 450 300 arguments 0;
+#X obj 46 13 inlet;
+#X obj 46 34 route in chunk;
+#X connect 0 0 1 0;
+#X restore 186 84 pd arguments;
+#X obj 69 34 inlet midi note;
+#X connect 0 0 1 0;
