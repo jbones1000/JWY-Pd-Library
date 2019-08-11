@@ -1,6 +1,0 @@
-#N canvas 0 23 881 521 10;
-#X obj 23 25 inlet;
-#X obj 23 46 route note mess, f 37;
-#N canvas 0 23 450 300 yo-\$1 0;
-#X restore 137 218 pd yo-\$1;
-#X connect 0 0 1 0;
