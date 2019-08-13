@@ -1,4 +1,0 @@
-#N canvas 121 228 724 410 10;
-#X obj 427 64 loadbang;
-#N canvas 0 23 450 300 \$0-here 0;
-#X restore 177 175 pd \$0-here;
