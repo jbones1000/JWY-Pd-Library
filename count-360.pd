@@ -1,4 +1,4 @@
-#N canvas 2 131 635 507 10;
+#N canvas 2 155 635 507 10;
 #X obj 74 101 t f f;
 #X obj 74 133 <;
 #X obj 74 155 sel 1;
@@ -11,9 +11,9 @@
 #X obj 74 187 f 0;
 #X obj 42 19 inlet metro-360;
 #X obj 42 372 outlet looped-count;
-#X obj 256 17 inlet loop in beats;
-#X obj 256 61 i;
-#X obj 256 39 * 360;
+#X obj 242 19 inlet loop in beats;
+#X obj 242 63 i;
+#X obj 242 41 * 360;
 #X text 347 211 arg1: loop time in beats;
 #X obj 344 83 loadbang;
 #X obj 344 105 f \$1;
