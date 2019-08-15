@@ -1,4 +1,4 @@
-#N canvas 2 155 635 507 10;
+#N canvas 2 161 635 507 10;
 #X obj 74 101 t f f;
 #X obj 74 133 <;
 #X obj 74 155 sel 1;
@@ -17,7 +17,6 @@
 #X text 347 211 arg1: loop time in beats;
 #X obj 344 83 loadbang;
 #X obj 344 105 f \$1;
-#X obj 42 280 + 0.499999;
 #X obj 42 302 i;
 #X obj 224 130 sel 1;
 #X obj 224 107 >=;
@@ -31,18 +30,17 @@
 #X connect 5 0 18 0;
 #X connect 6 0 5 1;
 #X connect 7 0 11 0;
-#X connect 7 1 21 0;
+#X connect 7 1 20 0;
 #X connect 8 0 9 1;
 #X connect 8 0 5 1;
 #X connect 9 0 4 0;
 #X connect 9 0 6 0;
 #X connect 10 0 3 0;
 #X connect 12 0 14 0;
-#X connect 13 0 21 1;
+#X connect 13 0 20 1;
 #X connect 14 0 13 0;
 #X connect 16 0 17 0;
 #X connect 17 0 14 0;
-#X connect 18 0 19 0;
-#X connect 19 0 7 0;
-#X connect 20 0 8 0;
-#X connect 21 0 20 0;
+#X connect 18 0 7 0;
+#X connect 19 0 8 0;
+#X connect 20 0 19 0;
